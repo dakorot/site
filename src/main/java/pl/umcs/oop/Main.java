@@ -10,11 +10,10 @@ public class Main {
         db.connect("test.db");
         AccountManager am = new AccountManager(db);
 //        am.register("user123", "password123");
-//        System.out.println(am.authenticate("user123", "password123"));
+        System.out.println(am.authenticate("user2", "password1234"));
 
         System.out.println(am.getAccount("1"));
 //        am.register("user2", "password1234");
         System.out.println(am.getAccount("3"));
     }
-
 }

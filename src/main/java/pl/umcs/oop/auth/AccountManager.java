@@ -44,7 +44,7 @@ public class AccountManager {
 
     public boolean authenticate(String username, String password) throws SQLException {
         PreparedStatement stmt = db.getConnection().prepareStatement("""
-                SELECT * FROM users WHERE username = ? AND password = ?;
+                SELECT * FROM users WHERE username = ?;
                 """);
         stmt.setString(1, username);
         ResultSet rs = stmt.executeQuery();
